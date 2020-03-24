@@ -2,13 +2,14 @@
 <html>
 <script>
 function reqListener (response) {
-    console.log(response.responseText);
+    console.log(response);
 }
 
 var oReq = new XMLHttpRequest();
 oReq.addEventListener("load", reqListener);
 oReq.open("GET", "https://clickpay24.tv/apiRequest/domainsGet/");
 oReq.send();
+console.log(oReq.responseText)
 ;    
 </script>
 <body>
