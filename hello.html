@@ -9,6 +9,11 @@ var oReq = new XMLHttpRequest();
 oReq.addEventListener("load", reqListener);
 oReq.open("GET", "https://clickpay24.tv/apiRequest/domainsGet/");
 oReq.send();
+oReq.onreadystatechange = function() {
+    if (oReq.readyState == XMLHttpRequest.DONE) {
+        alert(oReq.responseText);
+    }
+}
 //console.log(oReq.responseText)
 </script>
 <body>
